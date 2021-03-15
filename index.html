@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les petits plats</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+
+        <!-- Logo -->
+        <img src="images/logo.png" width="280" alt="Logo">
+
+        <!-- Search -->
+        <form id="Search">
+            <input id="search-box" type="text" name="search" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
+            <button id="submit-btn" type="submit" class="fa fa-search"></button>
+        </form>
+
+        <!-- Tags Box -->
+        <div id="tags-placeholder"></div>
+
+        <!-- Filter Buttons -->
+        <ul id="filter-buttons">
+            <li id="Ingrediants">
+                <input id="input-Ingrediants" type="text" placeholder="Ingredients">
+                <i class="fas fa-chevron-down" id="chevron-down-Ingrediants"></i>
+                <i class="fas fa-chevron-up" id="chevron-up-Ingrediants"></i>
+                <div id="Ingrediants-placeholder"></div>
+            </li>
+            <li id="Appareil">
+                <input id="input-Appareil" type="text" placeholder="Appareil">
+                <i class="fas fa-chevron-down" id="chevron-down-Appareil"></i>
+                <i class="fas fa-chevron-up" id="chevron-up-Appareil"></i>
+                <div id="Appareil-placeholder"></div>
+            </li>
+            <li id="Ustensiles">
+                <input id="input-Ustensiles" type="text" placeholder="Ustensiles">
+                <i class="fas fa-chevron-down" id="chevron-down-Ustensiles"></i>
+                <i class="fas fa-chevron-up" id="chevron-up-Ustensiles"></i>
+                <div id="Ustensiles-placeholder"></div>
+            </li>
+        </ul>
+
+    </header>
+
+    <script type="module" src="js/recipes.js"></script>
+
+</body>
+</html>
