@@ -96,6 +96,130 @@ header {
     cursor: pointer ;
 }
 
+#recettes {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.recette-box {
+    width: 26rem;
+    height: 23rem;
+    background-color: #C7BEBE;
+    margin-bottom: 2.5rem;
+    border-radius: 5px;
+    position: relative;
+}
+.recette-informations {
+    background-color: #E7E7E7;
+    position: absolute;
+    top: 40%;
+    height: 60%;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+}
+.tittle-and-time {
+    padding: 1rem;
+}
+.tittle-and-time>h1 {
+    margin: 0;
+    float: left;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tittle-and-time>span {
+    margin: 0;
+    float: right;
+    font-weight: 500;
+    font-weight: bold;
+}
+.fa-clock{
+    font-weight: 500;
+}
+.ingrediants-and-instructions {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    overflow: hidden;
+}
+.ingrediants {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.instructions {
+    width:50%;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+.instructions> span {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* when button is clicked open this one*/
+.expand-the-btn{
+    width: 50%;
+}
+.expanded-button{
+    width: 100%;
+    max-height: 25.7rem;
+    background-color: #3282F7 !important;
+    position: absolute;
+    top: 3rem ;
+    left: 0;
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+    display: flex !important;
+    overflow: hidden !important;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+.expanded-Appareil {
+    width: 100%;
+    max-height: 10.4rem;
+    background-color: #68D9A4 !important;
+    position: absolute;
+    top: 3rem ;
+    left: 0;
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+    display: flex !important;
+    overflow: hidden !important;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+.expanded-Ustensiles{
+    width: 100%;
+    max-height: 15.7rem;
+    background-color: #ED6454 !important;
+    position: absolute;
+    top: 3rem ;
+    left: 0;
+    z-index: 5;
+    border-radius: 0 0 5px 5px;
+    display: flex !important;
+    overflow: hidden !important;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
 .liIngrediants{
     cursor: pointer;
     display: block;
@@ -194,4 +318,22 @@ header {
     border-radius: 7px;
     background-color: #ED6454;
     color: white;
+}
+#suggest-message {
+    font-size: 1rem;
+    color: rgb(134, 141, 148);
+}
+#suggest-message>p {
+    margin-top: 5rem;
+    text-align: center;
+    color: rgba(233, 51, 51, 0.746);
+}
+
+@media only screen and (max-width: 1424px){
+    #recettes-container {
+        justify-content: space-evenly;
+    }
+    .recette-box {
+        margin: 1rem;
+    }
 }

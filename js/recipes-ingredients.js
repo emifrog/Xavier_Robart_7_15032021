@@ -4,8 +4,7 @@ import {recipes} from "./recipes.js";
 let allTheRecipes = recipes;
 const recetteContainerDOM = document.getElementById('recettes');
 
-//grab allTheRecipes and do a for each to it and put them into the template literale
-export function allRecepiess(recepies) {
+export function allRecepies(recepies) {
 
     recepies.forEach(recette => {
 
@@ -31,4 +30,4 @@ export function allRecepiess(recepies) {
     })
 }
 
-allRecepiess(allTheRecipes);
+allRecepies(allTheRecipes);
