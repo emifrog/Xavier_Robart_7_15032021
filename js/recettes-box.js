@@ -1,10 +1,11 @@
-import {recipes} from "./recipes.js";
+import {recipes} from "./recettes.js";
 
 
 let allTheRecipes = recipes;
 const recetteContainerDOM = document.getElementById('recettes');
 
-export function allRecepies(recepies) {
+//saisissez allTheRecipes et faites-en un pour chacun d'eux et mettez-les dans le modèle
+export function allRecepiess(recepies) {
 
     recepies.forEach(recette => {
 
@@ -30,4 +31,4 @@ export function allRecepies(recepies) {
     })
 }
 
-allRecepies(allTheRecipes);
+allRecepiess(allTheRecipes);

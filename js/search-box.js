@@ -1,16 +1,15 @@
 
-import {recipes} from "./recipes.js";
-import {allRecepiess} from "./recipes-ingredients.js"
+import {recipes} from "./recettes.js";
+import {allRecepiess} from "./recettes-box.js"
 let recettes = recipes;
 
-
-//select the input dom element
+// sélectionnez l'élément du Dom
 const serachInputBox = document.getElementById('search-box');
 const recetteContainerDOM = document.getElementById('recettes');
 const suggestMessage = document.getElementById('suggest-message');
 
 
-//filter recipes using search box
+//filtrer les recettes à l'aide du champ de recherche
 serachInputBox.addEventListener('keyup', (key) => {
 
    const enteredValue = key.target.value.toLowerCase();
@@ -19,10 +18,10 @@ serachInputBox.addEventListener('keyup', (key) => {
 
         const filteredRecettes = recettes.filter((recette) => {
             return (
-                recette.name.toLowerCase().includes(enteredValue) ||                                    // recherche la recette par nom
+                recette.name.toLowerCase().includes(enteredValue) ||                                    // rechercher la recette par nom
                 recette.ingredients.some(i => i.ingredient.toLowerCase().includes(enteredValue)) ||     // ingredients
-                recette.ustensils.some(u => u.toLowerCase().includes(enteredValue)) ||                  // ustensiles
-                recette.appliance.toLowerCase().includes(enteredValue) ||                               // appareil
+                recette.ustensils.some(u => u.toLowerCase().includes(enteredValue)) ||                  // ustensils
+                recette.appliance.toLowerCase().includes(enteredValue) ||                               // appliance
                 recette.description.toLowerCase().includes(enteredValue)                                // description        
             )
         })
@@ -30,7 +29,7 @@ serachInputBox.addEventListener('keyup', (key) => {
             recetteContainerDOM.innerHTML = "";
             allRecepiess(filteredRecettes);
 
-            showSuggestionMessage (filteredRecettes)
+            showSuggestionMessage (filteredRecettes) //appel la fonction et affiche un message d erreur
 
    }else {
         recetteContainerDOM.innerHTML = ""; 
@@ -38,8 +37,7 @@ serachInputBox.addEventListener('keyup', (key) => {
    }
 });
 
-
-//afficher le message de suggestion si aucune correspondance n'est trouvée entre la valeur d'entrée dans l'élément du tableau
+//afficher le message de suggestion si aucune correspondance n'est trouvée entre la valeur d'entrée et l'élément du tableau
 function showSuggestionMessage (filteredRecettes) {
 
     if (filteredRecettes.length <= 0) {
@@ -49,17 +47,17 @@ function showSuggestionMessage (filteredRecettes) {
         //effacez le html de la div parent chaque fois que la condition est vraie
         suggestMessage.innerHTML = "";
 
-        //Aucune recette correspondante à la recherche
+        //remplir le html a chaque fois que la condition est vraie
         pElement.innerHTML = "Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc."
 
         suggestMessage.append(pElement);
 
     }else {
 
-        // efface le suggestion
+        //effacez la suggestion div si vous n'en avez pas besoin
         suggestMessage.innerHTML = "";
 
-        //effacez les anciennes recettes du conteneur de recettes avant de remplir les nouvelles valeurs 
+        //effacez les anciennes recettes du conteneur de recettes avant de remplir les nouvelles valeurs
         recetteContainerDOM.innerHTML = "";
         allRecepiess(filteredRecettes);
     }

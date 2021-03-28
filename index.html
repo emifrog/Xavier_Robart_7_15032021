@@ -10,53 +10,63 @@
 </head>
 <body>
     
-    <!-- Header -->
+
     <header>
 
-        <!-- Logo -->
-        <img src="images/logo.png" width="280" alt="Logo">
+        <img src="images/logo.png" width="280" alt="logo">
 
         <!-- Search -->
-        <form id="Search">
+        <form id="Searchbox-form">
             <input id="search-box" type="text" name="search" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
             <button id="submit-btn" type="submit" class="fa fa-search"></button>
         </form>
 
-        <!-- Tags Box -->
+        <!-- Tags -->
         <div id="tags-placeholder"></div>
 
-        <!-- Filter Buttons -->
+        <!-- Filtre -->
         <ul id="filter-buttons">
+
             <li id="Ingrediants">
                 <input id="input-Ingrediants" type="text" placeholder="Ingredients">
                 <i class="fas fa-chevron-down" id="chevron-down-Ingrediants"></i>
                 <i class="fas fa-chevron-up" id="chevron-up-Ingrediants"></i>
                 <div id="Ingrediants-placeholder"></div>
             </li>
+
             <li id="Appareil">
                 <input id="input-Appareil" type="text" placeholder="Appareil">
                 <i class="fas fa-chevron-down" id="chevron-down-Appareil"></i>
                 <i class="fas fa-chevron-up" id="chevron-up-Appareil"></i>
                 <div id="Appareil-placeholder"></div>
             </li>
+
             <li id="Ustensiles">
                 <input id="input-Ustensiles" type="text" placeholder="Ustensiles">
                 <i class="fas fa-chevron-down" id="chevron-down-Ustensiles"></i>
                 <i class="fas fa-chevron-up" id="chevron-up-Ustensiles"></i>
                 <div id="Ustensiles-placeholder"></div>
             </li>
+
         </ul>
 
     </header>
 
     <main>
 
-    <div id="recettes"></div>
+        <!-- Suggestion Message -->
+        <div id="suggest-message"></div>
+
+        <!-- Recettes -->
+        <div id="recettes"></div>
 
     </main>
 
-    <script src="js/recipes.js"></script>
-    <script src="js/recipes-ingredients.js"></script>
+    <script type="module" src="js/search-box.js"></script>
+    <script type="module" src="js/recettes.js"></script>
+    <script type="module" src="js/btns.js"></script>
+    <script type="module" src="js/recettes-box.js"></script>
+
 
 </body>
 </html>
